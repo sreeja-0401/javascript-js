@@ -1,31 +1,29 @@
-
-        // // Prompt the user to enter a number
-        // const number = parseInt(prompt("Enter an integer to generate its multiplication table:"));
-
-        // // Check if the input is a valid number
-         function ourrequirement(){
-    var a = document.getElementById("a").value;
-    if (a == ''){
-       alert("Please enter Values") 
+function tables1() {
+    let n = document.getElementById("num").value;
+    let a = 1;
+    let table1 = '';
+    while (a <= 10) {
+        table1 = table1 + "<br>" + (n + " x " + a + " = " + (n * a));
+        a++;
     }
-    else {
-        var a1 = parseInt(a);
+    document.getElementById("display1").innerHTML = table1;
+}
+function tables2() {
+    let n = document.getElementById("num").value;
+    let b = 1;
+    let table2 = '';
+     do {
+         table2 = table2 + "<br>" + (n + " x " + b + " = " + (n * b));
+        b++;
+    } while (b <= 10);
+    document.getElementById("display2").innerHTML = table2;
+}
+function tables3() {
+    let n = document.getElementById("num").value;
+    let  c= 1;
+    let table3 = '';
+     for (let c = 1; c <= 10; c++) {
+        table3 = table3 + "<br>" + (n + " x " + c + " = " + (n * c));
     }
-
-
-            let number = a
-            let i = 1; // Initialize the counter for the multiplication
-            let output = "<h2>Multiplication Table for " + a + "</h2>";
-
-            
-            while (i <= 10) {
-                const result = a * i;
-                output += "<p>" + a + " * " + i + " = " + result + "</p>";
-                i++; // Increment the counter
-            }
-
-            // Display the multiplication table in the HTML div
-            document.getElementById("multiplicationTable").innerHTML = output;
-        }
-    
-
+    document.getElementById("display3").innerHTML = table3;
+}
