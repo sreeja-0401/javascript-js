@@ -14,7 +14,7 @@ function method1() {
     doners.sort();
     console.log(doners);
     doners.splice(2);
-    
+    console.log(doners);
 
     for(let person of doners)
     {
