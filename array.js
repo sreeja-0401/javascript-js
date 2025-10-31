@@ -3,6 +3,6 @@ function method1() {
     for(let person of doners)
     {
         console.log(person);
-    }
-
+    
+}
 }
