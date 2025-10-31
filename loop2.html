@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <h1>Multiplication Table Generator</h1>
+    <div id="multiplicationTable"></div>
+
+    <script>
+        // Prompt the user to enter a number
+        const number = parseInt(prompt("Enter an integer to generate its multiplication table:"));
+
+        // Check if the input is a valid number
+        if (isNaN(number)) {
+            document.getElementById("multiplicationTable").innerHTML = "Please enter a valid number.";
+        } else {
+            let i = 1; // Initialize the counter for the multiplication
+            let output = "<h2>Multiplication Table for " + number + "</h2>";
+
+            // Use a while loop to generate the multiplication table up to 10
+            while (i <= 10) {
+                const result = number * i;
+                output += "<p>" + number + " * " + i + " = " + result + "</p>";
+                i++; // Increment the counter
+            }
+
+            // Display the multiplication table in the HTML div
+            document.getElementById("multiplicationTable").innerHTML = output;
+        }
+    </script>
+</body>
+</html>
